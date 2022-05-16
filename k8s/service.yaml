@@ -9,7 +9,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - port: 8080
+    - port: 8040
       targetPort: 5000
   selector:
     name: server-pod-deliveryservice
