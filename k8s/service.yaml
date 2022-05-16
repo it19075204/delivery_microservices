@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: server-pod-deliveryservice
+  labels:
+    name: server-pod-deliveryservice
+    app: cluster-1
+
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 5000
+  selector:
+    name: server-pod-deliveryservice
+    app: cluster-1
